@@ -1,28 +1,26 @@
 #include<iostream.h>
 void main()
 {
-	int x,y;
-	cout<<"�����룺";
+	int x,b;
+	b=0;
+	cout<<"请输入一个整数"<<endl;
 	cin>>x;
-	if(x>1000)
-		y=1;
-	else
+	while(x!=0)
 	{
-	 if(x>100)
-		y=2;
-	 else
-	 {
-	 if(x>10)
-		 y=3;
-	else
-		y=4;}
+		if(b<4)
+		{
+		b++;
+		x=x/10;
+		}
+		else
+		cout<<"输入有误!!!";
 	}
-	switch(y)
+	switch(b)
 	{
-	case 1:cout<<"1000����\n";break;
-	case 2:cout<<"100~999\n";break;
-	case 3:cout<<"10~99\n";break;
-    default:cout<<"С��10\n";
+	  case 0:cout<<"x等于0";break;
+	  case 1:cout<<"x小于10";break;
+          case 2:cout<<"x大于9小于100";break;
+	  case 3:cout<<"x大于99小于1000";break;
+	  case 4:cout<<"x大于999";break;
 	}
 }
-
